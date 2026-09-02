@@ -9,7 +9,13 @@ export function generateStaticParams() { return services.map(service => ({ slug:
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const service = getService(params.slug);
   if (!service) return {};
-  return { title: `${service.title} in Houston | Rashad the Helper`, description: service.summary };
+  const title = `${service.title} in Houston | Rashad the Helper`;
+  return {
+    title,
+    description: service.summary,
+    openGraph: { title, description: service.summary, url: `/services/${service.slug}`, images: [] },
+    twitter: { title, description: service.summary, images: [] },
+  };
 }
 
 export default function ServiceDetail({ params }: { params: { slug: string } }) {
