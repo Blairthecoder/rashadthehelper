@@ -75,7 +75,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Owner-operated in Greater Houston</p>
-          <h1>Houston Moving Help, Handled by Rashad.</h1>
+          <h1>Houston Moving Help, Handled by Rashad</h1>
           <p className="hero-lede">Loading, unloading, heavy lifting, furniture assembly, and rental-truck driving — $50 an hour with the truck and equipment included in the plan.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="tel:+15042098175"><Phone size={17} /> Call or text: 504-209-8175</a>
@@ -94,7 +94,7 @@ export default function Home() {
         <div className="reel-head">
           <div>
             <p className="eyebrow">Straight from the job</p>
-            <h2>See the work before you book.</h2>
+            <h2>See the Work Before You Book</h2>
           </div>
           <div className="reel-head-side">
             <p>Thousands of people follow Rashad&apos;s moves. Swipe through recent jobs, real trucks, and real furniture.</p>
@@ -128,7 +128,7 @@ export default function Home() {
           <article>
             <span className="answer-icon money"><CircleDollarSign size={26} /></span>
             <div>
-              <h2>How much will my move cost?</h2>
+              <h2>How Much Will My Move Cost?</h2>
               <p>Moving labor starts at $50 per hour. A one-bedroom load-out usually runs two to three hours. You get the scope confirmed before the date, not a surprise number on move day.</p>
               <a className="text-link" href="#details">See what jobs cost <ArrowRight size={17} /></a>
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
           <article>
             <span className="answer-icon truck"><Truck size={26} /></span>
             <div>
-              <h2>What does Rashad bring?</h2>
+              <h2>What Does Rashad Bring?</h2>
               <p>A moving truck, a dolly, moving blankets, and a toolbox for basic furniture. If you already have a truck or a container, he works with what you have instead.</p>
               <a className="text-link" href="/services">Compare services <ArrowRight size={17} /></a>
             </div>
@@ -144,7 +144,7 @@ export default function Home() {
           <article>
             <span className="answer-icon box"><PackageCheck size={26} /></span>
             <div>
-              <h2>What kinds of moves?</h2>
+              <h2>What Kinds of Moves?</h2>
               <p>Apartments and homes, storage units and PODS, single heavy items like appliances and safes, furniture assembly, and rental-truck loading or driving.</p>
               <a className="text-link" href="/services">See every service <ArrowRight size={17} /></a>
             </div>
@@ -152,7 +152,7 @@ export default function Home() {
           <article>
             <span className="answer-icon calendar"><CalendarDays size={26} /></span>
             <div>
-              <h2>How do I book a date?</h2>
+              <h2>How Do I Book a Date?</h2>
               <p>Send your date, both ZIP codes, and what needs moving. Rashad reviews it himself and confirms availability directly — nothing is booked until he says so.</p>
               <a className="text-link" href="#booking">Request a time <ArrowRight size={17} /></a>
             </div>
@@ -162,7 +162,7 @@ export default function Home() {
 
       <section className="section services-section" id="services">
         <div className="section-heading split-heading">
-          <div><p className="eyebrow">How Rashad can help</p><h2>Choose the help your move needs.</h2></div>
+          <div><p className="eyebrow">How Rashad can help</p><h2>Choose the Help Your Move Needs</h2></div>
           <p>From one heavy item to a full rental truck, start with the service that sounds closest. You can explain the whole job in your request.</p>
         </div>
         <div className="service-grid">
@@ -185,18 +185,18 @@ export default function Home() {
       <section className="confidence-section">
         <div className="confidence-intro">
           <p className="eyebrow">Plan with confidence</p>
-          <h2>Know what to expect before move day.</h2>
+          <h2>Know What to Expect Before Move Day</h2>
           <p>Clear responsibilities make the day easier. Rashad confirms the scope with you directly before the job.</p>
           <a href="#booking" className="text-link">Ask about your move <ArrowRight size={18} /></a>
         </div>
         <div className="expectation-card included-card">
           <span className="expectation-icon"><Check size={20} /></span>
-          <h3>Rashad provides</h3>
+          <h3>Rashad Provides</h3>
           <ul><li>A moving truck</li><li>Hands-on moving help</li><li>A dolly and moving blankets</li><li>A toolkit for simple furniture</li></ul>
         </div>
         <div className="expectation-card customer-card">
           <span className="expectation-icon"><Truck size={20} /></span>
-          <h3>Have ready</h3>
+          <h3>Have Ready</h3>
           <ul><li>Sealed and labeled boxes</li><li>Clear walkways for carrying</li><li>Parking and access details</li><li>Notice of unusually heavy items</li></ul>
         </div>
       </section>
@@ -204,37 +204,37 @@ export default function Home() {
       <section className="work-section" id="how-it-works">
         <div className="work-copy">
           <p className="eyebrow">Simple from the start</p>
-          <h2>Three steps to a smoother move.</h2>
+          <h2>Three Steps to a Smoother Move</h2>
           <p className="body-copy">Share the useful details once. Rashad reviews the job and follows up directly.</p>
           <a href="#booking" className="button button-light">Start your request <ArrowDownRight size={18} /></a>
         </div>
         <ol className="steps">
-          <li><span>1</span><div><h3>Tell us about the move</h3><p>Date, ZIP codes, stairs, truck size, and what needs lifting.</p></div></li>
-          <li><span>2</span><div><h3>Get a direct response</h3><p>Rashad reviews the details and confirms availability and scope.</p></div></li>
-          <li><span>3</span><div><h3>Get moving</h3><p>Have your items ready. Rashad arrives with the moving truck and agreed equipment.</p></div></li>
+          <li><span>1</span><div><h3>Tell Us About the Move</h3><p>Date, ZIP codes, stairs, truck size, and what needs lifting.</p></div></li>
+          <li><span>2</span><div><h3>Get a Direct Response</h3><p>Rashad reviews the details and confirms availability and scope.</p></div></li>
+          <li><span>3</span><div><h3>Get Moving</h3><p>Have your items ready. Rashad arrives with the moving truck and agreed equipment.</p></div></li>
         </ol>
       </section>
 
       <section className="section explainer-section" id="details">
         <div className="section-heading split-heading">
-          <div><p className="eyebrow">Houston moving help, explained</p><h2>What hiring Rashad actually looks like.</h2></div>
+          <div><p className="eyebrow">Houston moving help, explained</p><h2>What Hiring Rashad Actually Looks Like</h2></div>
           <p>Most moving quotes hide the details until the truck shows up. Here is how the common jobs work, what they cost, and what changes the timeline.</p>
         </div>
         <div className="explainer-grid">
           <article>
-            <h3>Apartment and high-rise moves</h3>
+            <h3>Apartment and High-Rise Moves</h3>
             <p>Apartment moves in Houston live or die on access. Elevator reservations, loading-zone rules, and long carries from the dock add real time to the job, so Rashad asks for your building&apos;s move-out window and parking situation up front. Third-floor walk-ups in Midtown and elevator buildings downtown get planned differently, and the hourly rate stays the same either way.</p>
           </article>
           <article>
-            <h3>Storage units, PODS, and containers</h3>
+            <h3>Storage Units, PODS, and Containers</h3>
             <p>Loading a storage unit or portable container is about stacking discipline, not speed. Rashad loads heavy furniture low and tight, uses moving blankets between surfaces, and leaves an aisle if you will need to reach items later. Storage clean-outs work the same way in reverse, with the truck available when items are moving to a new address.</p>
           </article>
           <article>
-            <h3>Appliances and heavy single items</h3>
+            <h3>Appliances and Heavy Single Items</h3>
             <p>Not every job is a full move. Plenty of calls are one washer, one sleeper sofa, or a gun safe that needs to reach a second floor. Send the item, its rough weight, the doorway widths, and how many stairs are involved — that is enough for Rashad to confirm whether it is a one-person job or needs a second set of hands.</p>
           </article>
           <article>
-            <h3>Rental trucks and long-distance routes</h3>
+            <h3>Rental Trucks and Long-Distance Routes</h3>
             <p>If you have already reserved a U-Haul, Penske, or Budget truck, Rashad can load it, unload it at the other end, or drive it when that is arranged ahead of time. Rental agreements have to permit an additional driver, so send the rental company, truck size, and full route with your request and he will confirm what is possible before you commit to the date.</p>
           </article>
         </div>
@@ -246,7 +246,7 @@ export default function Home() {
       <section className="area-section">
         <div className="area-copy">
           <p className="eyebrow"><MapPin size={15} /> Greater Houston</p>
-          <h2>Local help for moves across the Houston area.</h2>
+          <h2>Local Help for Moves Across the Houston Area</h2>
           <p>Rashad is based in Houston and works jobs from Katy and Cypress out to Pearland, Sugar Land, Spring, Humble, and The Woodlands. Send your starting and destination ZIP codes and he will confirm travel and availability before you make plans around the date.</p>
           <div className="area-list">{serviceAreas.map((area) => <span key={area}><MapPin size={15} />{area}</span>)}</div>
           <a className="button button-dark" href="/service-areas">Check service areas <ArrowRight size={18} /></a>
@@ -264,44 +264,44 @@ export default function Home() {
       <section className="why-section">
         <div className="why-heading">
           <p className="eyebrow">Why hire Rashad</p>
-          <h2>More than an extra set of hands.</h2>
+          <h2>More Than an Extra Set of Hands</h2>
           <p>The person who reviews your request is the person who shows up for your move. Here is what that gets you.</p>
         </div>
         <ol className="why-grid">
           <li>
             <span className="why-number">1</span>
             <UserRoundCheck size={30} />
-            <h3>One point of contact</h3>
+            <h3>One Point of Contact</h3>
             <p>No dispatch chain and no call-center handoff. You talk to Rashad about your job, before and on move day.</p>
           </li>
           <li>
             <span className="why-number">2</span>
             <MessageCircle size={30} />
-            <h3>Scope confirmed first</h3>
+            <h3>Scope Confirmed First</h3>
             <p>Availability, hours, and what the job involves get settled before your date, so nothing gets renegotiated at the curb.</p>
           </li>
           <li>
             <span className="why-number">3</span>
             <CircleDollarSign size={30} />
-            <h3>A straight hourly rate</h3>
+            <h3>A Straight Hourly Rate</h3>
             <p>$50 an hour for moving labor. No packages to decode, no per-item pricing, no fuel surcharge invented on arrival.</p>
           </li>
           <li>
             <span className="why-number">4</span>
             <Truck size={30} />
-            <h3>Truck and gear included</h3>
+            <h3>Truck and Gear Included</h3>
             <p>Moving truck, dolly, moving blankets, and a toolbox come with the job when your move needs them.</p>
           </li>
           <li>
             <span className="why-number">5</span>
             <ShieldCheck size={30} />
-            <h3>Careful with your things</h3>
+            <h3>Careful With Your Things</h3>
             <p>Blankets between surfaces, heavy pieces loaded low and tight, and walkways kept clear while the work is happening.</p>
           </li>
           <li>
             <span className="why-number">6</span>
             <MapPin size={30} />
-            <h3>Houston local</h3>
+            <h3>Houston Local</h3>
             <p>He knows the apartment complexes, the loading-zone rules, and which hours turn a short crosstown run into a long one.</p>
           </li>
         </ol>
@@ -314,7 +314,7 @@ export default function Home() {
       <section className="social-section" id="tiktok">
         <div className="social-heading">
           <p className="eyebrow">Latest on TikTok</p>
-          <h2>Meet the helper.</h2>
+          <h2>Meet the Helper</h2>
           <p>Moving days, truck runs, and practical tips straight from Rashad. His newest TikTok videos load here automatically.</p>
           <a className="button button-dark" href={tiktokUrl} target="_blank" rel="noreferrer">Follow @rashadthehelper <ArrowUpRight size={18} /></a>
         </div>
@@ -324,17 +324,17 @@ export default function Home() {
       <section className="booking-section" id="booking">
         <div className="booking-intro">
           <p className="eyebrow">Request a time</p>
-          <h2>Tell Rashad about your move.</h2>
+          <h2>Tell Rashad About Your Move</h2>
           <p>The more useful detail you share now, the easier it is to confirm the job and prepare for move day.</p>
           <div className="move-plan" aria-label="What to include in your request">
-            <div className="move-plan-heading"><span>Your move plan</span><strong>Start with the basics</strong></div>
+            <div className="move-plan-heading"><span>Your Move Plan</span><strong>Start With the Basics</strong></div>
             <ul>
               <li><CalendarDays size={20} /><div><strong>Your date</strong><span>Preferred day and time</span></div></li>
               <li><MapPin size={20} /><div><strong>Your route</strong><span>Starting and destination ZIPs</span></div></li>
               <li><Truck size={20} /><div><strong>Your setup</strong><span>Truck needs, stairs, and access</span></div></li>
               <li><PackageCheck size={20} /><div><strong>Your items</strong><span>Furniture and anything extra heavy</span></div></li>
             </ul>
-            <div className="move-plan-footer"><Clock3 size={18} /><p><strong>About 2 minutes</strong><span>to prepare your request</span></p></div>
+            <div className="move-plan-footer"><Clock3 size={18} /><p><strong>About 2 Minutes</strong><span>to prepare your request</span></p></div>
           </div>
           <ul className="booking-notes"><li><Check size={16} /> No payment required to request</li><li><Check size={16} /> Your date is booked only after confirmation</li><li><Check size={16} /> Labor starts at $50 per hour</li></ul>
         </div>
@@ -342,14 +342,14 @@ export default function Home() {
       </section>
 
       <section className="section faq-section" id="faq">
-        <div className="section-heading split-heading"><div><p className="eyebrow">Frequently asked questions</p><h2>Helpful answers before you book.</h2></div><p>If your situation is different, include the question with your move details and Rashad can confirm what is possible.</p></div>
+        <div className="section-heading split-heading"><div><p className="eyebrow">Frequently asked questions</p><h2>Helpful Answers Before You Book</h2></div><p>If your situation is different, include the question with your move details and Rashad can confirm what is possible.</p></div>
         <div className="faq-list">{faqs.map(([question, answer], index) => <details key={question}><summary><span>0{index + 1}</span>{question}<b>+</b></summary><p>{answer}</p></details>)}</div>
       </section>
 
       <section className="location-cta">
         <div>
           <p className="eyebrow"><MapPin size={15} /> Houston moving help</p>
-          <h2>Have a move coming up?</h2>
+          <h2>Have a Move Coming Up?</h2>
           <p>Send the date, route, access details, and what needs moving. Rashad will take it from there.</p>
         </div>
         <div className="location-cta-actions">

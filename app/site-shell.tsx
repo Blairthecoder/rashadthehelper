@@ -32,12 +32,12 @@ export function SiteHeader() {
           <summary aria-label="Open navigation"><Menu size={22} /><span>Menu</span></summary>
           <nav aria-label="Mobile navigation">
             <a href="/services">Services</a>
-            <a href="/service-areas">Areas we serve</a>
-            <a href="/#how-it-works">How it works</a>
-            <a href="/#latest">Latest posts</a>
+            <a href="/service-areas">Areas We Serve</a>
+            <a href="/#how-it-works">How It Works</a>
+            <a href="/#latest">Latest Posts</a>
             <a href="/#faq">FAQ</a>
             <a href="tel:+15042098175">Call 504-209-8175</a>
-            <a href="/#booking">Request a time <ArrowUpRight size={17} /></a>
+            <a href="/#booking">Request a Time <ArrowUpRight size={17} /></a>
           </nav>
         </details>
       </header>
@@ -53,11 +53,11 @@ export function SiteFooter() {
           <span className="brand-text"><strong>Rashad the Helper</strong><small>Houston moving help</small></span>
         </a>
         <p>Moving help with a truck, dolly, blankets, and toolkit for homes and apartments across Greater Houston.</p>
-        <a className="footer-cta" href="/#booking">Request a time <ArrowUpRight size={17} /></a>
+        <a className="footer-cta" href="/#booking">Request a Time <ArrowUpRight size={17} /></a>
         <a className="footer-phone" href="tel:+15042098175"><Phone size={15} /> 504-209-8175</a>
       </div>
-      <div className="footer-column"><h2>Services</h2><a href="/services/truck-loading">Moving truck &amp; loading</a><a href="/services/unloading">Unloading</a><a href="/services/heavy-lifting">Heavy lifting</a><a href="/services/furniture-assembly">Furniture assembly</a><a href="/services/rental-truck-driving">Truck driving</a></div>
-      <div className="footer-column"><h2>Explore</h2><a href="/service-areas">Areas we serve</a><a href="/#how-it-works">How it works</a><a href="/#latest">Latest posts</a><a href="/#faq">Common questions</a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram ↗</a><a href={tiktokUrl} target="_blank" rel="noreferrer">TikTok ↗</a></div>
+      <div className="footer-column"><h2>Services</h2><a href="/services/truck-loading">Moving Truck &amp; Loading</a><a href="/services/unloading">Unloading</a><a href="/services/heavy-lifting">Heavy Lifting</a><a href="/services/furniture-assembly">Furniture Assembly</a><a href="/services/rental-truck-driving">Truck Driving</a></div>
+      <div className="footer-column"><h2>Explore</h2><a href="/service-areas">Areas We Serve</a><a href="/#how-it-works">How It Works</a><a href="/#latest">Latest Posts</a><a href="/#faq">Common Questions</a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram ↗</a><a href={tiktokUrl} target="_blank" rel="noreferrer">TikTok ↗</a></div>
       <div className="footer-bottom"><span>Houston, Texas</span><span>© {new Date().getFullYear()} Rashad the Helper</span><span>Truck &amp; moving equipment available</span></div>
     </footer>
   );
@@ -67,7 +67,7 @@ export function MobileBookingBar() {
   return (
     <aside className="mobile-booking-bar" aria-label="Quick booking">
       <a className="mobile-call" href="tel:+15042098175"><Phone size={16} /> Call Rashad</a>
-      <a className="mobile-book" href="/#booking">Request a time</a>
+      <a className="mobile-book" href="/#booking">Request a Time</a>
     </aside>
   );
 }
