@@ -5,7 +5,6 @@ import {
   CalendarDays,
   Check,
   Clock3,
-  Instagram,
   MapPin,
   MessageCircle,
   PackageCheck,
@@ -16,6 +15,7 @@ import {
   UserRoundCheck,
   Wrench,
 } from 'lucide-react';
+import { InstagramIcon } from './brand-icons';
 import { BookingForm } from './booking-form';
 import { HeroForm } from './hero-form';
 import { serviceAreas, services } from './service-data';
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="reel-head-side">
             <p>Thousands of people follow Rashad&apos;s moves. Swipe through recent jobs, real trucks, and real furniture.</p>
             <div className="reel-follow">
-              <a className="button button-primary" href={instagramUrl} target="_blank" rel="noreferrer"><Instagram size={17} /> Follow on Instagram</a>
+              <a className="button button-primary" href={instagramUrl} target="_blank" rel="noreferrer"><InstagramIcon size={17} /> Follow on Instagram</a>
               <a className="button button-ghost" href={tiktokUrl} target="_blank" rel="noreferrer">Watch on TikTok <ArrowUpRight size={16} /></a>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
           ))}
         </div>
         <div className="reel-footer">
-          <a className="button button-primary" href={instagramUrl} target="_blank" rel="noreferrer"><Instagram size={18} /> See every post on Instagram</a>
+          <a className="button button-primary" href={instagramUrl} target="_blank" rel="noreferrer"><InstagramIcon size={18} /> See every post on Instagram</a>
         </div>
       </section>
 

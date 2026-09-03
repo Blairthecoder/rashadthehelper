@@ -1,13 +1,6 @@
-import { ArrowUpRight, Instagram, MapPin, Menu, Phone } from 'lucide-react';
+import { ArrowUpRight, MapPin, Menu, Phone } from 'lucide-react';
+import { InstagramIcon, TikTokIcon } from './brand-icons';
 import { instagramUrl, tiktokUrl } from './social-data';
-
-export function TikTokIcon({ size = 15 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .77-5.06V9.7a5.69 5.69 0 0 0-.77-.05A5.65 5.65 0 1 0 15.54 15V8.99a7.35 7.35 0 0 0 4.3 1.38V7.3a4.29 4.29 0 0 1-3.24-1.48Z" />
-    </svg>
-  );
-}
 
 export function SiteHeader() {
   return (
@@ -17,8 +10,8 @@ export function SiteHeader() {
         <div className="utility-contact">
           <a className="utility-phone" href="tel:+15042098175"><Phone size={13} /> Call or Text 504-209-8175</a>
           <span className="utility-social">
-            <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Rashad the Helper on Instagram"><Instagram size={15} /></a>
-            <a href={tiktokUrl} target="_blank" rel="noreferrer" aria-label="Rashad the Helper on TikTok"><TikTokIcon /></a>
+            <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Rashad the Helper on Instagram"><InstagramIcon size={15} /></a>
+            <a href={tiktokUrl} target="_blank" rel="noreferrer" aria-label="Rashad the Helper on TikTok"><TikTokIcon size={15} /></a>
           </span>
         </div>
       </div>
