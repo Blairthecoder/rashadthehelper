@@ -1,0 +1,58 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        env:
+          NEXT_PUBLIC_SITE_URL: https://rashadthehelper.netlify.app
+        run: pnpm run build:netlify
+
+      # Deploying needs a Netlify personal access token stored as the
+      # NETLIFY_AUTH_TOKEN repository secret. Without it the build above still
+      # runs on every push, which catches compile errors before they reach
+      # production — the deploy step just skips.
+      - name: Check for deploy credentials
+        id: creds
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [ -n "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::NETLIFY_AUTH_TOKEN is not set — built successfully but skipping deploy."
+          fi
+
+      - name: Deploy to Netlify
+        if: steps.creds.outputs.available == 'true' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npx --yes netlify-cli@latest deploy \
+            --prod \
+            --dir=dist-netlify \
+            --site=8c275757-f182-4ac9-8e7e-ab041c40a918 \
+            --message="${{ github.event.head_commit.message }}"
