@@ -22,7 +22,8 @@ export function BookingForm() {
   const [form, setForm] = useState(initial);
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
-  const bookingEmail = process.env.NEXT_PUBLIC_BOOKING_EMAIL ?? '';
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const summary = useMemo(() => [
     `Name: ${form.name}`,
@@ -40,12 +41,30 @@ export function BookingForm() {
     setForm((current) => ({ ...current, [name]: value }));
   }
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
-    if (bookingEmail) {
-      const subject = encodeURIComponent(`Moving request from ${form.name} — ${form.date}`);
-      window.location.href = `mailto:${bookingEmail}?subject=${subject}&body=${encodeURIComponent(summary)}`;
+    setSubmitting(true);
+    setError('');
+
+    const body = new URLSearchParams({
+      'form-name': 'move-request',
+      subject: `Move request from ${form.name} — ${form.date}`,
+      ...form,
+    });
+
+    try {
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      });
+      if (!response.ok) throw new Error('Submission failed');
+      setSubmitted(true);
+    } catch {
+      setError('Your request could not be sent just now. Copy the details below and send them to Rashad through Instagram or TikTok.');
+      setSubmitted(true);
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -58,25 +77,28 @@ export function BookingForm() {
     return (
       <div className="booking-form success-panel" role="status">
         <span className="success-icon" aria-hidden="true">✓</span>
-        <p className="form-step">Request prepared</p>
-        <h3>{bookingEmail ? 'Your email app is opening.' : 'This booking flow is ready to connect.'}</h3>
-        <p>{bookingEmail ? 'Send the prepared email to deliver your move details to Rashad.' : 'For this pitch preview, the request is summarized below. Add Rashad’s preferred booking email at launch to route every submission directly to his inbox.'}</p>
-        <pre>{summary}</pre>
-        <button className="button button-dark" type="button" onClick={copyRequest}>▣ {copied ? 'Copied' : 'Copy request'}</button>
+        <p className="form-step">{error ? 'Keep your request handy' : 'Request received'}</p>
+        <h3>{error ? 'We saved your details below.' : 'Thanks—your move details are on their way.'}</h3>
+        <p>{error || 'Rashad will review the job and respond directly about availability. Your date is not booked until he confirms it with you.'}</p>
+        {error && <pre>{summary}</pre>}
+        {error && <button className="button button-dark" type="button" onClick={copyRequest}>▣ {copied ? 'Copied' : 'Copy request'}</button>}
         <button className="form-reset" type="button" onClick={() => { setSubmitted(false); setCopied(false); }}>Edit details</button>
       </div>
     );
   }
 
   return (
-    <form className="booking-form" onSubmit={submit}>
+    <form className="booking-form" name="move-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit}>
+      <input type="hidden" name="form-name" value="move-request" />
+      <input type="hidden" name="subject" value={`Move request from ${form.name || 'website visitor'}`} />
+      <p className="honeypot-field" aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
       <p className="form-step">Move request · about 2 minutes</p>
       <div className="form-grid">
-        <label>Full name *<input required autoComplete="name" value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Your name" /></label>
-        <label>Mobile number *<input required type="tel" autoComplete="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="(713) 555-0123" /></label>
-        <label>Email address<input type="email" autoComplete="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@email.com" /></label>
+        <label>Full name *<input required name="name" autoComplete="name" value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Your name" /></label>
+        <label>Mobile number *<input required name="phone" type="tel" autoComplete="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="(713) 555-0123" /></label>
+        <label>Email address<input name="email" type="email" autoComplete="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@email.com" /></label>
         <label>What do you need? *
-          <select required value={form.service} onChange={(e) => update('service', e.target.value)}>
+          <select required name="service" value={form.service} onChange={(e) => update('service', e.target.value)}>
             <option value="" disabled>Choose a service</option>
             <option value="Loading help">Loading help</option>
             <option value="Unloading help">Unloading help</option>
@@ -87,13 +109,13 @@ export function BookingForm() {
             <option value="Other">Other</option>
           </select>
         </label>
-        <label>Preferred date *<input required type="date" value={form.date} onChange={(e) => update('date', e.target.value)} /></label>
-        <label>Starting ZIP code *<input required inputMode="numeric" pattern="[0-9]{5}" maxLength={5} value={form.startZip} onChange={(e) => update('startZip', e.target.value)} placeholder="77002" /></label>
-        <label>Destination ZIP<input inputMode="numeric" pattern="[0-9]{5}" maxLength={5} value={form.endZip} onChange={(e) => update('endZip', e.target.value)} placeholder="If different" /></label>
-        <label>Truck / container size<input value={form.truck} onChange={(e) => update('truck', e.target.value)} placeholder="Example: 15 ft rental truck" /></label>
-        <label className="full-field">Anything Rashad should know?<textarea value={form.details} onChange={(e) => update('details', e.target.value)} placeholder="Stairs, elevator, heavy items, parking distance, furniture to assemble, or timing details…" /></label>
+        <label>Preferred date *<input required name="date" type="date" value={form.date} onChange={(e) => update('date', e.target.value)} /></label>
+        <label>Starting ZIP code *<input required name="startZip" inputMode="numeric" pattern="[0-9]{5}" maxLength={5} value={form.startZip} onChange={(e) => update('startZip', e.target.value)} placeholder="77002" /></label>
+        <label>Destination ZIP<input name="endZip" inputMode="numeric" pattern="[0-9]{5}" maxLength={5} value={form.endZip} onChange={(e) => update('endZip', e.target.value)} placeholder="If different" /></label>
+        <label>Truck / container size<input name="truck" value={form.truck} onChange={(e) => update('truck', e.target.value)} placeholder="Example: 15 ft rental truck" /></label>
+        <label className="full-field">Anything Rashad should know?<textarea name="details" value={form.details} onChange={(e) => update('details', e.target.value)} placeholder="Stairs, elevator, heavy items, parking distance, furniture to assemble, or timing details…" /></label>
       </div>
-      <button className="button button-dark submit-button" type="submit">Prepare my request <ArrowGlyph /></button>
+      <button className="button button-dark submit-button" type="submit" disabled={submitting}>{submitting ? 'Sending…' : 'Send my move details'} <ArrowGlyph /></button>
       <p className="form-fineprint">A request does not guarantee availability. Rashad confirms the job directly.</p>
     </form>
   );
