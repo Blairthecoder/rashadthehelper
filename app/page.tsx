@@ -158,6 +158,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="social-section" id="latest">
+        <div className="social-heading">
+          <p className="eyebrow">Latest from Rashad</p>
+          <h2>See the work.<br />Meet the helper.</h2>
+          <p>Follow along for recent moving jobs, practical tips, and updates straight from Rashad. The newest public posts and reels appear here automatically.</p>
+          <a className="button button-dark" href="https://www.instagram.com/rashadthehelper/" target="_blank" rel="noreferrer">Follow @rashadthehelper <ArrowUpRight size={18} /></a>
+        </div>
+        <div className="instagram-embed-shell">
+          <iframe
+            src="https://www.instagram.com/rashadthehelper/embed/"
+            title="Latest Instagram posts from Rashad the Helper"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
+      </section>
+
       <section className="booking-section" id="booking">
         <div className="booking-intro">
           <p className="eyebrow">Request a time</p>
