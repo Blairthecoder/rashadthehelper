@@ -3,7 +3,7 @@ import { ArrowDownRight, ArrowUpRight, Check } from 'lucide-react';
 import { services } from '../service-data';
 import { MobileBookingBar, SiteFooter, SiteHeader } from '../site-shell';
 
-export const metadata: Metadata = { title: 'Moving Services | Rashad the Helper', description: 'Explore Houston moving labor for truck loading, unloading, heavy lifting, furniture assembly, and rental-truck driving.' };
+export const metadata: Metadata = { title: 'Moving Services | Rashad the Helper', description: 'Explore Houston moving help with a moving truck, dolly, blankets, toolkit, loading, unloading, heavy lifting, and furniture assembly.' };
 
 export default function ServicesPage() {
   return <main><SiteHeader />

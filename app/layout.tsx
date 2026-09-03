@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Rashad the Helper | Houston Moving Labor',
-  description: 'Book straightforward moving labor in Houston for loading, unloading, heavy lifting, furniture assembly, and rental truck driving.',
+  description: 'Book Houston moving help with a moving truck, dolly, blankets, toolkit, loading, unloading, heavy lifting, and furniture assembly.',
   openGraph: {
     title: 'Rashad the Helper | Houston Moving Labor',
     description: 'Straightforward moving help in Greater Houston for loading, unloading, heavy lifting, furniture setup, and rental-truck driving.',

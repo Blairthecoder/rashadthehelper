@@ -34,7 +34,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'MovingCompany',
     name: 'Rashad the Helper',
-    description: 'Independent moving labor in Houston for loading, unloading, heavy lifting, furniture assembly and rental truck driving.',
+    description: 'Houston moving help with a moving truck, dolly, blankets, toolkit, loading, unloading, heavy lifting and furniture assembly.',
     areaServed: { '@type': 'City', name: 'Houston' },
     address: { '@type': 'PostalAddress', addressLocality: 'Houston', addressRegion: 'TX', addressCountry: 'US' },
     priceRange: '$50 per hour',

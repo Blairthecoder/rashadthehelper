@@ -44,7 +44,7 @@ export function SiteFooter() {
         <a className="footer-cta" href="/#booking">Check availability <ArrowUpRight size={17} /></a>
         <a className="footer-phone" href="tel:+15042098175"><Phone size={15} /> 504-209-8175</a>
       </div>
-      <div className="footer-column"><h2>Services</h2><a href="/services/truck-loading">Truck loading</a><a href="/services/unloading">Unloading</a><a href="/services/heavy-lifting">Heavy lifting</a><a href="/services/furniture-assembly">Furniture assembly</a><a href="/services/rental-truck-driving">Truck driving</a></div>
+      <div className="footer-column"><h2>Services</h2><a href="/services/truck-loading">Moving truck &amp; loading</a><a href="/services/unloading">Unloading</a><a href="/services/heavy-lifting">Heavy lifting</a><a href="/services/furniture-assembly">Furniture assembly</a><a href="/services/rental-truck-driving">Truck driving</a></div>
       <div className="footer-column"><h2>Explore</h2><a href="/service-areas">Service areas</a><a href="/#how-it-works">How it works</a><a href="/#latest">Latest posts</a><a href="/#faq">Common questions</a><a href="https://www.instagram.com/rashadthehelper/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@rashadthehelper" target="_blank" rel="noreferrer">TikTok ↗</a></div>
       <div className="footer-bottom"><span>Houston, Texas</span><span>© {new Date().getFullYear()} Rashad the Helper</span><span>Truck & moving equipment available</span></div>
     </footer>
