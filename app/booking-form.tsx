@@ -33,7 +33,7 @@ export function BookingForm() {
     `Preferred date: ${form.date}`,
     `Starting ZIP: ${form.startZip}`,
     `Destination ZIP: ${form.endZip || 'Same location / not provided'}`,
-    `Truck or container: ${form.truck || 'Not provided'}`,
+    `Truck needs: ${form.truck || 'Use Rashad’s moving truck'}`,
     `Job details: ${form.details || 'None provided'}`,
   ].join('\n'), [form]);
 
@@ -112,7 +112,7 @@ export function BookingForm() {
         <label>Preferred date *<input required name="date" type="date" value={form.date} onChange={(e) => update('date', e.target.value)} /></label>
         <label>Starting ZIP code *<input required name="startZip" inputMode="numeric" pattern="[0-9]{5}" maxLength={5} value={form.startZip} onChange={(e) => update('startZip', e.target.value)} placeholder="77002" /></label>
         <label>Destination ZIP<input name="endZip" inputMode="numeric" pattern="[0-9]{5}" maxLength={5} value={form.endZip} onChange={(e) => update('endZip', e.target.value)} placeholder="If different" /></label>
-        <label>Truck / container size<input name="truck" value={form.truck} onChange={(e) => update('truck', e.target.value)} placeholder="Example: 15 ft rental truck" /></label>
+        <label>Truck needs<input name="truck" value={form.truck} onChange={(e) => update('truck', e.target.value)} placeholder="Use Rashad’s truck or describe yours" /></label>
         <label className="full-field">Anything Rashad should know?<textarea name="details" value={form.details} onChange={(e) => update('details', e.target.value)} placeholder="Stairs, elevator, heavy items, parking distance, furniture to assemble, or timing details…" /></label>
       </div>
       <button className="button button-dark submit-button" type="submit" disabled={submitting}>{submitting ? 'Sending…' : 'Send my move details'} <ArrowGlyph /></button>

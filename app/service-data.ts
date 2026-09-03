@@ -14,13 +14,13 @@ export const services: Service[] = [
   {
     slug: 'truck-loading',
     number: '01',
-    title: 'Truck loading',
-    shortTitle: 'Load your truck',
-    summary: 'Careful, space-smart loading for rental trucks, trailers, PODS, and storage containers.',
-    intro: 'Rashad helps carry, stage, and load your belongings so the weight is balanced and the space is used well. You provide the truck or container; he brings the labor and core moving gear.',
+    title: 'Moving truck & loading',
+    shortTitle: 'Truck & loading',
+    summary: 'A moving truck plus careful, space-smart loading for homes, apartments, and storage moves.',
+    intro: 'Rashad brings his moving truck, carries and stages your belongings, and loads everything with balance and space in mind. He also brings a dolly, moving blankets, and a toolkit.',
     included: ['Carrying boxes and furniture', 'Organizing items inside the truck or container', 'Dolly, moving blankets, and basic tools', 'Basic furniture disassembly when needed'],
     prepare: ['Reserve and pick up the right-size truck', 'Have boxes sealed and walkways clear', 'Point out fragile, heavy, or high-priority items', 'Confirm parking, stairs, and elevator access'],
-    bestFor: ['Apartments and homes', 'Rental trucks and trailers', 'PODS and storage containers'],
+    bestFor: ['Apartments and homes', 'Moves using Rashad’s truck', 'PODS and storage containers'],
   },
   {
     slug: 'unloading',

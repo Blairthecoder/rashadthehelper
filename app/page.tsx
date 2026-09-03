@@ -20,7 +20,7 @@ import { serviceAreas, services } from './service-data';
 import { MobileBookingBar, SiteFooter, SiteHeader } from './site-shell';
 
 const faqs = [
-  ['Do you bring a moving truck?', 'No. This is a labor-only service, so you provide the rental truck, trailer, container, or storage unit. Rashad brings the moving help and equipment listed here.'],
+  ['Do you bring a moving truck?', 'Yes. Rashad has a moving truck and can bring it for your move. Share the route, timing, and what you are moving so he can confirm the truck and job details with you.'],
   ['What equipment do you bring?', 'Rashad brings a dolly, moving blankets, and a toolbox for basic furniture assembly and disassembly. Tell him about especially large or unusual items when you request a time.'],
   ['Can you drive my U-Haul or rental truck?', 'Driving help may be available for local and long-distance moves. Include the pickup, destination, truck size, and expected route in your request so Rashad can confirm.'],
   ['How much does it cost?', 'Moving labor starts at $50 per hour. Your request helps Rashad understand the job before he confirms availability and an estimated time.'],
@@ -50,14 +50,14 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><MapPin size={15} /> Local moving help in Greater Houston</p>
           <h1>Moving help<br />without the<br /><em>guesswork.</em></h1>
-          <p className="hero-lede">Tell Rashad what you are moving, where it is going, and when you need help. You will get a direct answer—no call center and no confusing packages.</p>
+          <p className="hero-lede">Rashad brings the moving truck, dolly, blankets, toolkit, and hands-on help. Tell him what you are moving, where it is going, and when you need help.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#booking">Request your move <ArrowDownRight size={19} /></a>
             <a className="button button-ghost" href="/services">View services <ArrowUpRight size={18} /></a>
           </div>
           <ul className="quick-trust" aria-label="Service benefits">
             <li><Check size={16} /> $50 per hour</li>
-            <li><Check size={16} /> Equipment included</li>
+            <li><Check size={16} /> Truck & equipment available</li>
             <li><Check size={16} /> Direct confirmation</li>
           </ul>
         </div>
@@ -66,7 +66,7 @@ export default function Home() {
           <ul>
             <li><CalendarDays size={21} /><div><strong>Your date</strong><span>Preferred day and time</span></div></li>
             <li><MapPin size={21} /><div><strong>Your route</strong><span>Starting and destination ZIPs</span></div></li>
-            <li><Truck size={21} /><div><strong>Your setup</strong><span>Truck size, stairs, and access</span></div></li>
+            <li><Truck size={21} /><div><strong>Your setup</strong><span>Truck needs, stairs, and access</span></div></li>
             <li><PackageCheck size={21} /><div><strong>Your items</strong><span>Furniture and anything extra heavy</span></div></li>
           </ul>
           <div className="move-plan-footer"><Clock3 size={18} /><p><strong>About 2 minutes</strong><span>to prepare your request</span></p><a href="#booking" aria-label="Start your moving request"><ArrowDownRight size={20} /></a></div>
@@ -75,8 +75,8 @@ export default function Home() {
 
       <section className="trust-strip" aria-label="Service summary">
         <div><CircleDollarSign size={21} /><span><strong>$50/hour</strong><small>straightforward labor rate</small></span></div>
-        <div><Truck size={21} /><span><strong>Labor only</strong><small>you provide the truck</small></span></div>
-        <div><Wrench size={21} /><span><strong>Useful gear</strong><small>dolly, blankets, and tools</small></span></div>
+        <div><Truck size={21} /><span><strong>Moving truck</strong><small>available for your move</small></span></div>
+        <div><Wrench size={21} /><span><strong>Equipment provided</strong><small>dolly, blankets, and toolkit</small></span></div>
         <div><MapPin size={21} /><span><strong>Houston based</strong><small>nearby areas considered</small></span></div>
       </section>
 
@@ -110,13 +110,13 @@ export default function Home() {
         </div>
         <div className="expectation-card included-card">
           <span className="expectation-icon"><Check size={20} /></span>
-          <h3>Rashad brings</h3>
-          <ul><li>Hands-on moving labor</li><li>A dolly and moving blankets</li><li>Basic tools for simple furniture</li><li>Direct job confirmation</li></ul>
+          <h3>Rashad provides</h3>
+          <ul><li>A moving truck</li><li>Hands-on moving help</li><li>A dolly and moving blankets</li><li>A toolkit for simple furniture</li></ul>
         </div>
         <div className="expectation-card customer-card">
           <span className="expectation-icon"><Truck size={20} /></span>
-          <h3>You provide</h3>
-          <ul><li>The truck, trailer, or container</li><li>Sealed boxes and clear walkways</li><li>Parking and access details</li><li>Notice of unusually heavy items</li></ul>
+          <h3>Have ready</h3>
+          <ul><li>Sealed and labeled boxes</li><li>Clear walkways for carrying</li><li>Parking and access details</li><li>Notice of unusually heavy items</li></ul>
         </div>
       </section>
 
@@ -130,7 +130,7 @@ export default function Home() {
         <ol className="steps">
           <li><span>1</span><div><h3>Tell us about the move</h3><p>Date, ZIP codes, stairs, truck size, and what needs lifting.</p></div></li>
           <li><span>2</span><div><h3>Get a direct response</h3><p>Rashad reviews the details and confirms availability and scope.</p></div></li>
-          <li><span>3</span><div><h3>Get moving</h3><p>Have the truck and items ready. Rashad arrives with the agreed equipment.</p></div></li>
+          <li><span>3</span><div><h3>Get moving</h3><p>Have your items ready. Rashad arrives with the moving truck and agreed equipment.</p></div></li>
         </ol>
       </section>
 
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="direct-points">
           <div><UserRoundCheck size={23} /><span><strong>One point of contact</strong><small>Talk directly with Rashad about your job.</small></span></div>
           <div><MessageCircle size={23} /><span><strong>Clear communication</strong><small>Get the scope and availability confirmed first.</small></span></div>
-          <div><ShieldCheck size={23} /><span><strong>No surprise package</strong><small>Know the hourly labor rate and what you provide.</small></span></div>
+          <div><ShieldCheck size={23} /><span><strong>No surprise package</strong><small>Confirm the hourly rate, truck, equipment, and job scope.</small></span></div>
         </div>
       </section>
 
@@ -193,7 +193,7 @@ export default function Home() {
       <section className="location-cta">
         <p className="eyebrow"><MapPin size={15} /> Houston moving help</p>
         <h2>Have a move coming up?</h2>
-        <p>Send the date, route, truck size, and what needs moving. Rashad will take it from there.</p>
+        <p>Send the date, route, access details, and what needs moving. Rashad will take it from there.</p>
         <a className="button button-primary" href="#booking">Request availability <ArrowDownRight size={19} /></a>
       </section>
       <SiteFooter />
