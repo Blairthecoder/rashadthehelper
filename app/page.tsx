@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   CalendarDays,
   Check,
+  CircleDollarSign,
   Clock3,
   MapPin,
   MessageCircle,
